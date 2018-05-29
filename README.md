@@ -1,3 +1,5 @@
+# Motion Detector
+
 It detects any motion in camera, and stores the time of motion in an excel file. It is based on OpenCV, basically it works on a simple princple.
 
 All work should be done in grayscale.
