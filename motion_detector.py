@@ -25,7 +25,7 @@ while True:
     thresholdFrame = cv2.threshold(deltaFrame, 30, 255, cv2.THRESH_BINARY)[1]
     thresholdFrame = cv2.dilate(thresholdFrame, None, iterations=2)
 
-    image, contours, hierarchy = cv2.findContours(thresholdFrame.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    contours, hierarchy = cv2.findContours(thresholdFrame.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     for contour in contours:
         if cv2.contourArea(contour) < 10000:
             continue
